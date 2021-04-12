@@ -1,0 +1,346 @@
+﻿C:\Users\BlackRoot>arp /a
+
+Interface: 192.168.10.13 --- 0x3
+  Internet Address      Physical Address      Type
+  192.168.10.1          cc-2d-e0-c2-a8-52     dynamic
+  192.168.10.9          10-2c-6b-1c-95-76     dynamic
+  192.168.10.255        ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+  239.255.255.250       01-00-5e-7f-ff-fa     static
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static
+
+  C:\Users\BlackRoot>date /t
+06/04/2021
+
+C:\Users\BlackRoot>cmdkey /list
+
+Currently stored credentials:
+
+    Target: MicrosoftAccount:target=SSO_POP_Device
+    Type: Generic
+    User: 02ipxayciaqqqdon
+    Saved for this logon only
+
+    Target: WindowsLive:target=virtualapp/didlogical
+    Type: Generic
+    User: 02ipxayciaqqqdon
+    Local machine persistence
+
+    C:\Users\BlackRoot>echo
+ECHO is on.
+
+C:\Users\BlackRoot>for {%%|%}<variable> in (<set>) do <command> [<commandlineoptions>]
+{%% was unexpected at this time.
+
+C:\Users\BlackRoot>help robocopy
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : 06 April 2021 18:29:51
+              Usage :: ROBOCOPY source destination [file [file]...] [options]
+
+             source :: Source Directory (drive:\path or \\server\share\path).
+        destination :: Destination Dir  (drive:\path or \\server\share\path).
+               file :: File(s) to copy  (names/wildcards: default is "*.*").
+
+::
+:: Copy options :
+::
+                 /S :: copy Subdirectories, but not empty ones.
+                 /E :: copy subdirectories, including Empty ones.
+             /LEV:n :: only copy the top n LEVels of the source directory tree.
+
+                 /Z :: copy files in restartable mode.
+                 /B :: copy files in Backup mode.
+                /ZB :: use restartable mode; if access denied use Backup mode.
+                 /J :: copy using unbuffered I/O (recommended for large files).
+            /EFSRAW :: copy all encrypted files in EFS RAW mode.
+
+  /COPY:copyflag[s] :: what to COPY for files (default is /COPY:DAT).
+                       (copyflags : D=Data, A=Attributes, T=Timestamps).
+                       (S=Security=NTFS ACLs, O=Owner info, U=aUditing info).
+
+
+               /SEC :: copy files with SECurity (equivalent to /COPY:DATS).
+           /COPYALL :: COPY ALL file info (equivalent to /COPY:DATSOU).
+            /NOCOPY :: COPY NO file info (useful with /PURGE).
+            /SECFIX :: FIX file SECurity on all files, even skipped files.
+            /TIMFIX :: FIX file TIMes on all files, even skipped files.
+
+             /PURGE :: delete dest files/dirs that no longer exist in source.
+               /MIR :: MIRror a directory tree (equivalent to /E plus /PURGE).
+
+               /MOV :: MOVe files (delete from source after copying).
+              /MOVE :: MOVE files AND dirs (delete from source after copying).
+
+     /A+:[RASHCNET] :: add the given Attributes to copied files.
+     /A-:[RASHCNET] :: remove the given Attributes from copied files.
+
+            /CREATE :: CREATE directory tree and zero-length files only.
+               /FAT :: create destination files using 8.3 FAT file names only.
+               /256 :: turn off very long path (> 256 characters) support.
+
+             /MON:n :: MONitor source; run again when more than n changes seen.
+             /MOT:m :: MOnitor source; run again in m minutes Time, if changed.
+
+      /RH:hhmm-hhmm :: Run Hours - times when new copies may be started.
+                /PF :: check run hours on a Per File (not per pass) basis.
+
+             /IPG:n :: Inter-Packet Gap (ms), to free bandwidth on slow lines.
+
+                /SL :: copy symbolic links versus the target.
+
+            /MT[:n] :: Do multi-threaded copies with n threads (default 8).
+                       n must be at least 1 and not greater than 128.
+                       This option is incompatible with the /IPG and /EFSRAW options.
+                       Redirect output using /LOG option for better performance.
+
+ /DCOPY:copyflag[s] :: what to COPY for directories (default is /DCOPY:DA).
+                       (copyflags : D=Data, A=Attributes, T=Timestamps).
+
+           /NODCOPY :: COPY NO directory info (by default /DCOPY:DA is done).
+
+         /NOOFFLOAD :: copy files without using the Windows Copy Offload mechanism.
+
+::
+:: File Selection Options :
+::
+                 /A :: copy only files with the Archive attribute set.
+                 /M :: copy only files with the Archive attribute and reset it.
+    /IA:[RASHCNETO] :: Include only files with any of the given Attributes set.
+    /XA:[RASHCNETO] :: eXclude files with any of the given Attributes set.
+
+ /XF file [file]... :: eXclude Files matching given names/paths/wildcards.
+ /XD dirs [dirs]... :: eXclude Directories matching given names/paths.
+
+                /XC :: eXclude Changed files.
+                /XN :: eXclude Newer files.
+                /XO :: eXclude Older files.
+                /XX :: eXclude eXtra files and directories.
+                /XL :: eXclude Lonely files and directories.
+                /IS :: Include Same files.
+                /IT :: Include Tweaked files.
+
+             /MAX:n :: MAXimum file size - exclude files bigger than n bytes.
+             /MIN:n :: MINimum file size - exclude files smaller than n bytes.
+
+          /MAXAGE:n :: MAXimum file AGE - exclude files older than n days/date.
+          /MINAGE:n :: MINimum file AGE - exclude files newer than n days/date.
+          /MAXLAD:n :: MAXimum Last Access Date - exclude files unused since n.
+          /MINLAD:n :: MINimum Last Access Date - exclude files used since n.
+                       (If n < 1900 then n = n days, else n = YYYYMMDD date).
+
+                /XJ :: eXclude Junction points and symbolic links. (normally included by default).
+
+               /FFT :: assume FAT File Times (2-second granularity).
+               /DST :: compensate for one-hour DST time differences.
+
+               /XJD :: eXclude Junction points and symbolic links for Directories.
+               /XJF :: eXclude symbolic links for Files.
+
+                /IM :: Include Modified files (differing change times).
+::
+:: Retry Options :
+::
+               /R:n :: number of Retries on failed copies: default 1 million.
+               /W:n :: Wait time between retries: default is 30 seconds.
+
+               /REG :: Save /R:n and /W:n in the Registry as default settings.
+
+               /TBD :: wait for sharenames To Be Defined (retry error 67).
+
+::
+:: Logging Options :
+::
+                 /L :: List only - don't copy, timestamp or delete any files.
+                 /X :: report all eXtra files, not just those selected.
+                 /V :: produce Verbose output, showing skipped files.
+                /TS :: include source file Time Stamps in the output.
+                /FP :: include Full Pathname of files in the output.
+             /BYTES :: Print sizes as bytes.
+
+                /NS :: No Size - don't log file sizes.
+                /NC :: No Class - don't log file classes.
+               /NFL :: No File List - don't log file names.
+               /NDL :: No Directory List - don't log directory names.
+
+                /NP :: No Progress - don't display percentage copied.
+               /ETA :: show Estimated Time of Arrival of copied files.
+
+          /LOG:file :: output status to LOG file (overwrite existing log).
+         /LOG+:file :: output status to LOG file (append to existing log).
+
+       /UNILOG:file :: output status to LOG file as UNICODE (overwrite existing log).
+      /UNILOG+:file :: output status to LOG file as UNICODE (append to existing log).
+
+               /TEE :: output to console window, as well as the log file.
+
+               /NJH :: No Job Header.
+               /NJS :: No Job Summary.
+
+           /UNICODE :: output status as UNICODE.
+
+::
+:: Job Options :
+::
+       /JOB:jobname :: take parameters from the named JOB file.
+      /SAVE:jobname :: SAVE parameters to the named job file
+              /QUIT :: QUIT after processing command line (to view parameters).
+              /NOSD :: NO Source Directory is specified.
+              /NODD :: NO Destination Directory is specified.
+                /IF :: Include the following Files.
+
+::
+:: Remarks :
+::
+       Using /PURGE or /MIR on the root directory of the volume formerly caused
+       robocopy to apply the requested operation on files inside the System
+       Volume Information directory as well. This is no longer the case; if
+       either is specified, robocopy will skip any files or directories with that
+       name in the top-level source and destination directories of the copy session.
+
+       The modified files classification applies only when both source
+       and destination filesystems support change timestamps (e.g., NTFS)
+       and the source and destination files have different change times but are
+       otherwise the same. These files are not copied by default; specify /IM
+       to include them.
+
+C:\Users\BlackRoot>net print \\Production\Dotmatrix
+The syntax of this command is:
+
+NET
+    [ ACCOUNTS | COMPUTER | CONFIG | CONTINUE | FILE | GROUP | HELP |
+      HELPMSG | LOCALGROUP | PAUSE | SESSION | SHARE | START |
+      STATISTICS | STOP | TIME | USE | USER | VIEW ]
+
+C:\Users\BlackRoot>ping /a 10.0.99.221
+
+Pinging 10.0.99.221 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 10.0.99.221:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\Users\BlackRoot>cd ..
+
+C:\Users>rd /s test
+test, Are you sure (Y/N)? y
+The system cannot find the file specified.
+
+C:\Users>taskkill /f /fi "USERNAME eq NT AUTHORITY\SYSTEM" /im notepad.exe
+
+INFO: No tasks running with the specified criteria.
+
+C:\Users\BlackRoot>choice /c ync
+[Y,N,C]?Y
+
+C:\Users\BlackRoot>defrag c: /u /v
+Microsoft Drive Optimizer
+Copyright (c) Microsoft Corp.
+
+The storage optimiser cannot start because you have insufficient privileges to perform this operation. (0x89000024)
+
+C:\Users\BlackRoot>getmac /fo table /nh /v
+
+Ethernet        Realtek PCIe FE 78-E3-B5-7A-F6-FF   Media disconnected
+WiFi            Qualcomm Athero 20-68-9D-14-C9-79   \Device\Tcpip_{075B855E-D8C2-4FF6-A51B-7AA5F0B39A81}
+
+C:\Users\BlackRoot>hostname
+DESKTOP-3B2U7RC
+
+C:\Users\BlackRoot>print /d:\\copyroom\printer1 c:\accounting\report.txt
+Unable to initialize device \\copyroom\printer1
+
+C:\Users\BlackRoot>sc.exe config NewService binpath= ntsd -d c:\windows\system32\NewServ.exe
+DESCRIPTION:
+        Modifies a service entry in the registry and Service Database.
+USAGE:
+        sc <server> config [service name] <option1> <option2>...
+
+OPTIONS:
+NOTE: The option name includes the equal sign.
+      A space is required between the equal sign and the value.
+      To remove the dependency, use a single / as dependency value.
+ type= <own|share|interact|kernel|filesys|rec|adapt|userown|usershare>
+ start= <boot|system|auto|demand|disabled|delayed-auto>
+ error= <normal|severe|critical|ignore>
+ binPath= <BinaryPathName to the .exe file>
+ group= <LoadOrderGroup>
+ tag= <yes|no>
+ depend= <Dependencies(separated by / (forward slash))>
+ obj= <AccountName|ObjectName>
+ DisplayName= <display name>
+ password= <password>
+
+ C:\Users\BlackRoot>telnet telnet.microsoft.com
+Telnet Win32 v2.1b2, Copyright (C) 2000 Paul Brannan <pbranna@clemson.edu>
+and the team.  This program comes with ABSOLUTELY NO WARRANTY; for details
+read LICENSE.TXT.  This is free software, and you are welcome to redistribute
+it under certain conditions.
+
+Loading configuration options from C:\laragon\bin\telnet\telnet.ini.
+Loading ANSI from C:\laragon\bin\telnet\telnet.cfg.
+Use configuration: ANSI.
+
+C:\Users\BlackRoot>tzutil /g
+SE Asia Standard Time
+
+C:\Users\BlackRoot>choice /c ync
+[Y,N,C]?Y
+
+C:\Users\BlackRoot>recover d:\fiction\story.txt
+Cannot determine file system of drive D:.
+
+C:\Users\BlackRoot>route print 10.*
+===========================================================================
+Interface List
+  4...78 e3 b5 7a f6 ff ......Realtek PCIe FE Family Controller
+ 11...12 68 9d 14 c9 79 ......Microsoft Wi-Fi Direct Virtual Adapter
+ 10...22 68 9d 14 c9 79 ......Microsoft Wi-Fi Direct Virtual Adapter #2
+ 17...42 68 9d 14 c9 79 ......Microsoft Hosted Network Virtual Adapter
+  3...20 68 9d 14 c9 79 ......Qualcomm Atheros AR9485 802.11b|g|n WiFi Adapter
+  1...........................Software Loopback Interface 1
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+  None
+Persistent Routes:
+  None
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+  None
+Persistent Routes:
+  None
+
+C:\Users\BlackRoot>setx MACHINE Brand1
+
+SUCCESS: Specified value was saved.
+
+C:\Users\BlackRoot>wmic context
+NAMESPACE             : root\cimv2
+ROLE                  : root\cli
+NODE(S)               : DESKTOP-3B2U7RC
+IMPLEVEL              : IMPERSONATE
+[AUTHORITY            : N/A]
+AUTHLEVEL             : PKTPRIVACY
+LOCALE                : ms_809
+PRIVILEGES            : ENABLE
+TRACE                 : OFF
+RECORD                : N/A
+INTERACTIVE           : OFF
+FAILFAST              : OFF
+OUTPUT                : STDOUT
+APPEND                : STDOUT
+USER                  : N/A
+AGGREGATE             : ON
