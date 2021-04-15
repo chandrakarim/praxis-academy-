@@ -79,11 +79,7 @@ WSGI_APPLICATION = 'novice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'daftar_tamu',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'POST': '5432',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
