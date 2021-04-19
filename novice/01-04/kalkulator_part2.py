@@ -87,6 +87,6 @@ while True :
     print ("Hasilnya adalah : ", hitung)
     ulang()
     clear()
- elif nomor == 4:
+ else :
    keluar()
    clear()
