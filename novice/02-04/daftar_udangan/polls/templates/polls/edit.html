@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}   
+        <label>No.Kursi</label><p>
+            <input type="text" name="no_urut" value="{{ data.no_urut }}" disabled>
+        </p>
+        <label>Nama</label><p>
+            <input type="text" name="nama" value="{{ data.nama }}">
+        </p>
+        <label>Alamat</label><p>
+            <input type="text" name="alamat" value="{{ data.alamat }}">
+        </p>
+        <label>No.Telepon</label><p>
+            <input type="number" name="no_tlp" value="{{ data.no_tlp }}">
+        </p>
+        <button type="submit" class="btn btn-success btn-sm">selesai</button>
+    </form>
+</body>
+</html>

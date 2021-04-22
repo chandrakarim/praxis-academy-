@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}  
+    <label>No.Kursi</label><p>
+        <input type="text" name="no_urut" placeholder="No"/>
+    </p>
+    <label>Nama</label><p>
+        <input type="text" name="nama" placeholder="Nama"/>
+    </p>
+    <label>Alamat</label><p>
+        <input type="text" name="alamat" placeholder="Alamat"/>
+    </p>
+    <label>No.Telepon</label><p>
+        <input type="number" name="no_tlp" placeholder="No Telepon"/>
+    </p>
+    <button type="submit">Simpan</button>
+</form>
+</body>
+</html>
